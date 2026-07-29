@@ -195,4 +195,12 @@ Transaction internals / under-the-hood:
 - Simplicity: Statement is slightly simpler for ad-hoc queries, but unsafe with user input.
 - Flexibility: PreparedStatement supports parameter binding, batch execution, and streams for large objects.
 
+ ## Quick summary
+
+JDBC is the Java API for talking to relational databases. At runtime your code obtains a Connection, prepares/executes SQL via Statement/PreparedStatement, reads results via ResultSet, and closes or returns resources. The JDBC driver converts these calls into the DB’s wire protocol; the DB parses/optimizes/executes SQL and sends rows back. Transactions, statement preparation, parameter binding, batching and resource cleanup all happen inside this flow.
+High-level flow (one-line)
+
+## jdbc working process 
+Driver registration → 2. Connection acquisition → 3. Statement/PreparedStatement creation → 4. Parameter binding (if any) → 5. SQL sent to DB / plan executed → 6. ResultSet produced / update count returned → 7. Close / return connection.
+
 ---
