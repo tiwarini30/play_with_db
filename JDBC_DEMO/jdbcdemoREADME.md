@@ -196,9 +196,3 @@ Transaction internals / under-the-hood:
 - Flexibility: PreparedStatement supports parameter binding, batch execution, and streams for large objects.
 
 ---
-
-If you want, I will:
-- Commit this updated deep-dive README to `JDBC_DEMO/jdbcdemoREADME.md` now, or
-- Tailor the file further to match package names and example classes present in the repository.
-
-Which would you like me to do?
