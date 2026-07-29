@@ -2,12 +2,13 @@ import java.sql.*;
 
 public class JDBCDemo {
 
-    private static  final String URL="jdbc:mysql://localhost:3306/jdbcdemo_db";
+    private static  final String URL="jdbc:mysql://localhost:3306/yourDB_name";
     private static  final String USER="root";
-    private static  final String PASSWORD="Tiwari@123";
+    private static  final String PASSWORD="YOURPASS";
 
     public static void main(String[] args) {
 //        Connection conn = null;
+        //normal try - catch block to connect with db
 //        try{
 //            conn = DriverManager.getConnection(URL,USER,PASSWORD);
 //            System.out.println("Connected to the database");
