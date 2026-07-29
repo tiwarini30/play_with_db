@@ -2,9 +2,9 @@ import java.sql.*;
 
 public class TransactionDemo {
 
-    private static  final String URL="jdbc:mysql://localhost:3306/jdbcdemo_db";
+    private static  final String URL="jdbc:mysql://localhost:3306/yourDB_name";
     private static  final String USER="root";
-    private static  final String PASSWORD="Tiwari@123";
+    private static  final String PASSWORD="YOUR_PAss";
 // database connection with try resource
     public static void main(String[] args) {
         try(Connection conn = DriverManager.getConnection(URL,USER,PASSWORD)){
