@@ -1,9 +1,4 @@
-# Hibernate ORM in Spring Boot — Interview Guide
-
-This document covers Hibernate (the most popular JPA provider) in the context of Spring Boot for interview preparation: definition, why use it, concepts, classes & methods, examples, entity lifecycle, working process, and differences between JDBC, JPA, and Hibernate.
-
----
-
+# Hibernate ORM in Spring Boot
 ## 1. Definition
 
 - Hibernate: an Object-Relational Mapping (ORM) framework for Java that maps Java classes to database tables and provides data query and retrieval facilities.
