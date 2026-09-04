@@ -1,18 +1,4 @@
-# JPA and EntityManager in Spring Boot - Interview Questions & Concepts
-
-## Table of Contents
-1. [JPA - Definition](#jpa---definition)
-2. [Why Use JPA](#why-use-jpa)
-3. [JPA Use Cases & Concepts](#jpa-use-cases--concepts)
-4. [Hibernate in JPA](#hibernate-in-jpa)
-5. [EntityManager - Definition](#entitymanager---definition)
-6. [EntityManager Classes & Methods](#entitymanager-classes--methods)
-7. [JPA Working Process](#jpa-working-process)
-8. [Spring Boot JPA Integration](#spring-boot-jpa-integration)
-
----
-
-## JPA - Definition
+# JPA and EntityManager in Spring Boot  
 
 **JPA (Java Persistence API)** is a **Java specification/standard** for managing relational data in Java applications. It provides:
 
@@ -1005,46 +991,7 @@ user.getOrders().size();  // ERROR: LazyInitializationException
 
 ---
 
-## Performance Tips
-
-### 1. **Use Batch Processing**
-```java
-for (User user : users) {
-    em.persist(user);
-    if (users.indexOf(user) % 100 == 0) {
-        em.flush();
-        em.clear();
-    }
-}
-```
-
-### 2. **Use Fetch Strategies**
-```java
-@OneToMany(fetch = FetchType.LAZY)  // Default, efficient
-@OneToMany(fetch = FetchType.EAGER) // Loads immediately
-```
-
-### 3. **Use Pagination**
-```java
-Query query = em.createQuery("SELECT u FROM User u");
-query.setFirstResult(0);
-query.setMaxResults(10);
-```
-
-### 4. **Enable Second-Level Cache**
-```properties
-spring.jpa.properties.hibernate.cache.use_second_level_cache=true
-spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.jcache.JCacheRegionFactory
-```
-
-### 5. **Use Projections (DTO)**
-```java
-@Query("SELECT new com.example.UserDTO(u.id, u.name) FROM User u")
-List<UserDTO> getUserDTOs();
-```
-
----
-
+ 
 ## Conclusion
 
 JPA and EntityManager provide a powerful abstraction layer for database operations in Spring Boot. Key takeaways:
